@@ -10,7 +10,7 @@ response = requests.get(url)
 
 # print(response.text)
 
-with open('output_s.txt', 'a') as f:
+with open('s_output.txt', 'a') as f:
     if response.ok:
         # parse the HTML content of the page
         soup = BeautifulSoup(response.content, "html.parser")
