@@ -1,6 +1,5 @@
-# pip install zenrows
-import os 
-from zenrows import ZenRowsClient
+### script to parse and search in the webpage
+
 import requests
 from bs4 import BeautifulSoup
 from bs4 import BeautifulSoup
