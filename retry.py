@@ -1,21 +1,19 @@
-#  Request with javascript rendering, premium proxy and proxy country, 
-# Set a case if there's an error or not.
+# Request with javascript rendering, premium proxy and proxy country, 
 # Set a retry logic for HTTP errors 429, 500, etc.
-#
-# pip install zenrows
-#from zenrows import ZenRowsClient
+# No SDK!
+
 import os 
 from dotenv import load_dotenv
 load_dotenv()
-
-zenrowsApiKey = os.getenv("api_key")
-
-
-
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+
+
+
+
+zenrowsApiKey = os.getenv("api_key")
 apikey = zenrowsApiKey
 urls = ['https://www.g2.com/products/notion/reviews']
 
