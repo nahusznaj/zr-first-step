@@ -7,16 +7,23 @@ load_dotenv()
 zenrowsApiKey = os.getenv("api_key")
 
 client = ZenRowsClient(zenrowsApiKey)
-url = "https://www.amazon.com/"
+url = "https://httpbin.io/get"
 
 params = {
     # enable Javascript rendering in a headless browser
     "js_render": "true",
     # enable a premium residential proxy
-    "premium_proxy": "true"
+    "premium_proxy": "true",
+    "proxy_country": "de"
 }
 
 response = client.get(url, params=params)
 
 with open('output_z.html', 'a') as f:
-    f.write(response.text)
+    if response.ok:
+        # f.write(response.text)
+
+
+        print(response.text)
+    else:
+        print("error")

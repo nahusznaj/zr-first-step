@@ -5,13 +5,6 @@ import requests
 from bs4 import BeautifulSoup
 from bs4 import BeautifulSoup
 
-
-from dotenv import load_dotenv
-load_dotenv()
-
-zenrowsApiKey = os.getenv("api_key")
-
-client = ZenRowsClient(zenrowsApiKey)
 url = "https://scrapeme.live/shop/"
 
 response = requests.get(url)
