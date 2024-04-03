@@ -1,3 +1,5 @@
+# Request with javascript rendering, premium proxy and proxy country, 
+# Zenrows SDK in use 
 # pip install zenrows
 from zenrows import ZenRowsClient
 import os 
