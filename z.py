@@ -18,5 +18,5 @@ params = {
 
 response = client.get(url, params=params)
 
-with open('output.html', 'a') as f:
+with open('output_z.html', 'a') as f:
     f.write(response.text)

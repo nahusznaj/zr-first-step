@@ -18,7 +18,7 @@ response = requests.get(url)
 
 # print(response.text)
 
-with open('output.txt', 'a') as f:
+with open('output_s.txt', 'a') as f:
     if response.ok:
         # parse the HTML content of the page
         soup = BeautifulSoup(response.content, "html.parser")
@@ -31,6 +31,7 @@ with open('output.txt', 'a') as f:
             prices.append(div.text)
         # if search_input_element is not None:
         #     print(search_input_element)
+        f.write(str(prices))
         print(prices)
     else:
         print(response)
