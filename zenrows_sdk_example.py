@@ -23,9 +23,6 @@ response = client.get(url, params=params)
 
 with open('output_z.html', 'a') as f:
     if response.ok:
-        # f.write(response.text)
-
-
         print(response.text)
     else:
         print("error")
